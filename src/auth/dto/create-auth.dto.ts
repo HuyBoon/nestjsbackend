@@ -10,5 +10,11 @@ export class CreateAuthDto {
     @IsOptional()
     name: string;
 
+}
+export class CodeAuthDto {
+    @IsNotEmpty({ message: "_id ko được để trống" })
+    _id: string;
 
+    @IsNotEmpty({ message: "code ko được để trống" })
+    code: string;
 }
